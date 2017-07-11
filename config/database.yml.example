@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: awesomeimages.dev
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+
+development:
+  <<: *default
+  database: awesomeimages_development
+
+test:
+  <<: *default
+  database: awesomeimages_test
+
+production:
+  <<: *default
+  database: awesomeimages_production
+  username: awesomeimages
+  password: <%= ENV['AWESOMEIMAGES_DATABASE_PASSWORD'] %>
