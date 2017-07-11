@@ -1,0 +1,7 @@
+%div.row
+  %div.col-xs-10.col-xs-offset-1
+    - flash.each do do |message_type, message|
+      %div{ class: build_alert_classes message_type }
+        = message
+        %a.close{"data-dismiss": "alert"}
+          &#215,
