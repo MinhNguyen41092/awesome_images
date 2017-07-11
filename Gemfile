@@ -33,8 +33,9 @@ end
 
 group :test do
   gem "rspec-rails"
-  gem "shoulda-matchers"
+  gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
   gem "email_spec"
+  gem "rails-controller-testing"
 end
 
 group :development do
