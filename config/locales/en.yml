@@ -1,3 +1,10 @@
 en:
+  home:
+    title: "AwesomeImages"
   user_form:
     new: "Register New Account"
+  footer:
+    care: "Customer Service"
+    help: "Help"
+    privacy: "Privacy"
+    service: "Service"

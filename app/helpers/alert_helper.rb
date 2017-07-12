@@ -3,13 +3,13 @@ module AlertHelper
     classes = "alert alert-dismissable "
     case alert_type.to_sym
     when :alert, :danger, :error, :validation_errors
-        classes += "alert-danger"
+      classes += "alert-danger"
     when :warning, :todo
-        classes += "alert-warning"
+      classes += "alert-warning"
     when :notice, :success
-        classes += "alert-success"
+      classes += "alert-success"
     else
-        classes += "alert-info"
+      classes += "alert-info"
     end
   end
 end

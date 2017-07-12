@@ -1,2 +1,46 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+.footer {
+  margin-top: 0px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+.foot-top {
+  margin-left: 110px
+}
+
+.foot-top > h5 {
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+.care {
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+.banner-dark {
+  background-color: #333333;
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.menu > li > a {
+  color: white;
+}
+
+a:-webkit-any-link {
+  text-decoration: none ;
+}
