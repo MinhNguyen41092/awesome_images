@@ -1,0 +1,27 @@
+div.container-fluid
+  div.row
+    div.col-xs-4.col-xs-offset-4
+        h4.text-center
+          | Login with
+        div.social
+          ul
+            li
+              a href="" class="facebook"
+                span class="fa fa-facebook"
+            li
+              a href="" class="twitter"
+                span class="fa fa-twitter"
+            li
+              a href="" class="google-plus"
+                span class="fa fa-google-plus"
+
+        h4.text-center
+          | or with AwesomeImages
+        div.login-form
+          = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+
+            = f.input :email, required: false, autofocus: true
+            = f.input :password, required: false
+            = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+
+            = f.button :submit, "Log in"

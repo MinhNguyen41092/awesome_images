@@ -1,6 +1,21 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import "font-awesome";
 
+/* body */
+.content {
+  margin-top: 70px;
+}
+
+body {
+  background-color: #191919;
+}
+
+h4 {
+  color: white;
+}
+
+/* Footer */
 .footer {
   margin-top: 0px;
   border-top: 1px solid #eaeaea;
@@ -26,9 +41,10 @@ ul {
   list-style: none;
 }
 
-.banner-dark {
+.dark {
   background-color: #333333;
   color: white;
+  margin-top: 10px;
 }
 
 .menu {
@@ -44,3 +60,91 @@ ul {
 a:-webkit-any-link {
   text-decoration: none ;
 }
+
+/* Navigation */
+ul.navbar-nav > li > a {
+  color: white;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: #222;
+  z-index: 10;
+}
+
+.header .navbar-brand {
+  font-weight: 900;
+  color: white;
+}
+
+.header .navbar {
+  margin: 0;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .header .navbar-brand {
+    padding-left: 0;
+  }
+  .navbar-nav {
+    float: right;
+  }
+}
+
+/* Login form */
+.form-group label {
+  color: white;
+}
+
+.login-form {
+  background-color: #2C2F34;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.social {
+  background-color: #2C2F34;
+  padding: 15px;
+  padding-top: 10px;
+  border-radius: 10px;
+  height: 55px;
+}
+
+.social ul{
+  display: block;
+  margin-left: -40px;
+}
+.social ul li{
+  list-style: none;
+  float: left;
+  width: 31.33%;
+  margin: 0 1%;
+}
+.social ul li a{
+  display: inline-block;
+  font-size: 17px;
+  text-decoration: none;
+  color: #fff;
+  padding: 6px;
+  display: block;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.social ul li a:hover{opacity: .8;}
+.social ul li a.facebook{
+   background: #3a589a;
+}
+.social ul li a.twitter {
+  background: #4099ff;
+  }
+ .social ul li a.google-plus {
+  background: #e9544f;
+}
+
