@@ -162,3 +162,20 @@ ul.navbar-nav > li > a {
   background: white;
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#000));
 }
+
+/* users table */
+.user-table {
+  background-color: #2C2F34;
+  border: 1px solid #191919;
+}
+
+th {
+  color: white;
+  border-bottom: 2px solid #191919 !important;
+}
+
+td {
+  color: white;
+  background-color: #2C2F34;
+  border: 1px solid #191919 !important;
+}
