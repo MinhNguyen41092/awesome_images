@@ -26,13 +26,13 @@ div class="header"
                 = current_user.username
                 span.caret
               ul class="dropdown-menu"
-                li>
+                li
                   = link_to "Edit settings", ""
                 li
                   = link_to "Your profile", ""
                 li class="divider"
                 li
-                  = link_to 'Logout', ""
+                  = link_to 'Logout', signout_path, method: :delete
           - else
             li
               = link_to "link 1", ""

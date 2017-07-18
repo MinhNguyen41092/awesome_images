@@ -4,26 +4,28 @@ div class="container"
       div class="panel panel-info"
         div class="panel-heading"
           h3 class="text-center"
-            Edit #{resource_name.to_s.humanize}
+            | Edit Profile
         div class="panel-body"
           = simple_form_for resource, as: resource_name, url: registration_path(resource_name),
-            , html: { method: :put } do |f|
+            html: {method: :patch} do |f|
             = f.error_notification
 
-            = f.input :email, required: true, autofocus: true
+            = f.input :email, label: false, placeholder: current_user.email,
+              autofocus: true
 
-            = f.input :username, required: true, autofocus: true
+            = f.input :username, label: false, placeholder: current_user.username
 
-            = f.input :full_name, required: true, autofocus: true
+            = f.input :full_name, label: false, placeholder: current_user.full_name
 
             - if devise_mapping.confirmable? && resource.pending_reconfirmation?
               p
                 | Currently waiting confirmation for: #{resource.unconfirmed_email}
             = f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false
             = f.input :password_confirmation, required: false
-            = f.input :current_password, hint: "we need your current password to confirm your changes", required: true
 
-            = f.button :submit, "Sign up"
+            = f.input :current_password, label: "Current password", hint: "we need your current password to confirm your changes", required: true
+
+            = f.button :submit, class: "btn btn-info btn-block"
 
 h3
   | Cancel my account

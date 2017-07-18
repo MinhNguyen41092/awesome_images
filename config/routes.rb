@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get "/register", to: "registrations#new", as: :register
     get "/signin", to: "sessions#new", as: :signin
+    delete "/signout", to: "sessions#destroy", as: :signout
     delete "/cancel", to: "registrations#destroy", as: :cancel
   end
   resources :users, only: [:index, :show]
