@@ -12,5 +12,11 @@ RSpec.describe User, type: :model do
       user1 = FactoryGirl.build :user, username: @user.email
       expect(user1.save).to be false
     end
+
+    it "should have default value for role" do
+      expect(@user.role).to eql "normal"
+    end
   end
+
+  it {should define_enum_for(:role).with([:normal, :admin, :banned])}
 end

@@ -5,6 +5,8 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: {case_sensitive: false}
   validate :valid_username
 
+  enum role: [:normal, :admin, :banned]
+
   class << self
     def find_for_database_authentication warden_conditions
       conditions = warden_conditions.dup

@@ -26,6 +26,7 @@ gem "bootstrap-social-rails"
 gem "haml-rails", "~> 0.9"
 gem "slim-rails"
 gem "slim"
+gem "cancancan", "~> 2.0"
 
 group :development, :test do
   gem "byebug", platform: :mri
