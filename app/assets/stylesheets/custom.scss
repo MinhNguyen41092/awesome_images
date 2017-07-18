@@ -4,7 +4,7 @@
 
 /* body */
 .content {
-  margin-top: 70px;
+  padding-top: 70px;
 }
 
 body {
@@ -69,7 +69,7 @@ ul.navbar-nav > li > a {
 .header {
   position: fixed;
   width: 100%;
-  background: #222;
+  background: #2C2F34;
   z-index: 10;
 }
 
@@ -101,6 +101,7 @@ ul.navbar-nav > li > a {
   background-color: #2C2F34;
   padding: 15px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .social {
@@ -148,3 +149,16 @@ ul.navbar-nav > li > a {
   background: #e9544f;
 }
 
+.delete-user {
+  margin-top: 10px;
+}
+
+.sexy_line{
+  display: block;
+  border: none;
+  color: white;
+  height: 1px;
+  margin-top: 15px;
+  background: white;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#000));
+}
