@@ -1,24 +1,17 @@
-# README
+# AwesomeImages
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project's purpose is to practice following technologies:
 
-Things you may want to cover:
+* ReactJS
 
-* Ruby version
+* Javascript
 
-* System dependencies
+* Rails associations
 
-* Configuration
+* Advanced gems (cancancan, ransack,...)
 
-* Database creation
+* UI design
 
-* Database initialization
+* Test
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Restful API
