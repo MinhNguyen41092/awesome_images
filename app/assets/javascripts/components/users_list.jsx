@@ -4,7 +4,7 @@ var UsersList = React.createClass({
       <tbody>
         {this.props.users.map(function(user) {
           return (
-            <User user={user} key = {user.id} />
+            <User user={user} key={user.id} />
           )
         })}
       </tbody>

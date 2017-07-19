@@ -27,11 +27,13 @@ gem "haml-rails", "~> 0.9"
 gem "slim-rails"
 gem "slim"
 gem "cancancan", "~> 2.0"
+gem "js-routes"
 
 group :development, :test do
   gem "byebug", platform: :mri
   gem "factory_girl_rails"
   gem "ffaker"
+  gem "pry"
 end
 
 group :test do
@@ -39,6 +41,10 @@ group :test do
   gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
   gem "email_spec"
   gem "rails-controller-testing"
+  gem "capybara"
+  gem "phantomjs"
+  gem "poltergeist"
+  gem "database_cleaner"
 end
 
 group :development do

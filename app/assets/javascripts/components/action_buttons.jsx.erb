@@ -1,0 +1,10 @@
+var ActionButtons = React.createClass({
+  render: function() {
+    user = this.props.user;
+    return (
+      <button rel="nofollow" data-method="delete" href={Routes.user_path(user.id)} className="btn btn-danger" id={user.username}>
+          <i className="fa fa-trash-o fa-lg"></i>
+      </button>
+    )
+  }
+});
