@@ -9,8 +9,14 @@ var ActionButtons = React.createClass({
       success: function(data){
         this.props.handleDeletedUser(this.props.user);
         message = 'User has been deleted';
-        this.props.getMessage(message);
+        type = 'success';
+        this.props.getMessage(message, type);
       }.bind(this),
+      error: function(xhr, status, error){
+        message = 'Could not delete user';
+        type = 'error';
+        this.props.getMessage(message, type);
+      }
     });
   },
 

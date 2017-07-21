@@ -3,25 +3,36 @@ var Users = React.createClass ({
     return {
       users: this.props.users,
       message: '',
+      type: '',
       display: 'none'
     }
   },
 
   handleDeletedUser: function(user) {
-    var display = this.state.display
     var users = this.state.users.slice();
     var index = users.indexOf(user);
     // remove 1 user at array[index]
     users.splice(index, 1);
-    this.setState({ users: users, display: 'block' });
+    this.setState({ users: users });
   },
 
-  getMessage: function(message) {
-    this.setState({message: message});
+  getMessage: function(message, type) {
+    this.setState({
+      message: message,
+      type: type,
+      display: 'block'
+    });
   },
 
-  displayMessage: function(display) {
-    return (<FlashMessage message={this.state.message} display={display} />)
+  removeMessage: function() {
+    this.setState({
+      message: '',
+      display: 'none'
+    });
+  },
+
+  displayMessage: function(message, display, type) {
+    return (<FlashMessage message={message} display={display} type={type} onClose={this.removeMessage}/>)
   },
 
   render: function() {
@@ -31,7 +42,7 @@ var Users = React.createClass ({
         key={'user' + user.id} handleDeletedUser={this.handleDeletedUser} getMessage={this.getMessage}/>);
     }.bind(this));
 
-    var flashMessage = this.displayMessage(this.state.display);
+    var flashMessage = this.displayMessage(this.state.message, this.state.display, this.state.type);
 
     return(
       <div className="container">

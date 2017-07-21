@@ -3,8 +3,8 @@ var User = React.createClass({
     this.props.handleDeletedUser(user);
   },
 
-  getMessage: function(message) {
-    this.props.getMessage(message);
+  getMessage: function(message, type) {
+    this.props.getMessage(message, type);
   },
 
   render: function() {
