@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get "/register", to: "registrations#new", as: :register
     get "/signin", to: "sessions#new", as: :signin
     delete "/signout", to: "sessions#destroy", as: :signout
-    match "users/:id", to: "users#destroy", via: :delete, as: :admin_destroy_user
+    match "admin_delete/users/:id", to: "users#destroy", via: :delete
   end
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index]
 end

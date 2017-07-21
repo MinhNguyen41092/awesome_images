@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable, :confirmable
-  attr_accessor :login
+  attr_accessor :login, :message
   validates :username, presence: true, uniqueness: {case_sensitive: false}
   validate :valid_username
 
