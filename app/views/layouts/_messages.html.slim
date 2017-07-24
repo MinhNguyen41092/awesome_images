@@ -1,7 +1,7 @@
 div class="row"
   div class="col-xs-10 col-xs-offset-1"
     - flash.each do |message_type, message|
-      div class="#{build_alert_classes(message_type)}"
+      div class="#{build_alert_classes(message_type)} fade in"
         = message
         a class="close" data-dismiss="alert"
           | &#215,

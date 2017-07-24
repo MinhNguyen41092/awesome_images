@@ -40,8 +40,12 @@ RSpec.configure do |config|
   DatabaseCleaner.strategy = :truncation
 
   config.include Warden::Test::Helpers
+
+  config.after :each do
+    Warden.test_reset!
+  end
   # Devise
-  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: [:controller, :feature]
 
   config.include WaitForAjax, type: :feature
 

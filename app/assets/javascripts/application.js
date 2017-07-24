@@ -19,3 +19,7 @@
 //= require js-routes
 //= require components
 //= require_tree .
+
+$(document).on("ready page:change", function() {
+  $('.actions').tooltip();
+});

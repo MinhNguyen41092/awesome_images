@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     delete "/signout", to: "sessions#destroy", as: :signout
     match "admin_delete/users/:id", to: "users#destroy", via: :delete
   end
-  resources :users, only: [:index]
+  resources :users, only: [:index, :update]
 end

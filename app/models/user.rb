@@ -7,6 +7,12 @@ class User < ApplicationRecord
 
   enum role: [:normal, :admin, :banned]
 
+  scope :normal, -> {where(role: 0)}
+  scope :admin, -> {where(role: 1)}
+  scope :banned, -> {where(role: 2)}
+  scope :newest, -> {order(created_at: :desc)}
+  scope :oldest, -> {order(created_at: :asc)}
+
   class << self
     def find_for_database_authentication warden_conditions
       conditions = warden_conditions.dup

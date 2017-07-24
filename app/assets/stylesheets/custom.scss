@@ -169,6 +169,10 @@ ul.navbar-nav > li > a {
   border: 1px solid #191919;
 }
 
+.table {
+  margin-bottom: 0px;
+}
+
 th {
   color: white;
   border-bottom: 2px solid #191919 !important;
@@ -180,4 +184,8 @@ td {
   color: white;
   background-color: #2C2F34;
   border: 1px solid #191919 !important;
+}
+
+button.btn-primary.set-admin {
+  margin-left: 5px;
 }

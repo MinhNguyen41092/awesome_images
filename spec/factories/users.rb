@@ -4,5 +4,6 @@ FactoryGirl.define do
     email {FFaker::Internet.email}
     password {FFaker::Internet.password}
     confirmed_at Time.now
+    role 1
   end
 end
